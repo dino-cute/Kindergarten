@@ -4,6 +4,8 @@ An interactive pop-up book for learning English, made for kindergarten and early
 
 一本能点、能听、会弹起来的立体书英语课本，给幼儿园到小学低年级的小朋友用。在浏览器里打开就能玩，24 课学完大约到 A1 水平。
 
+**▶ Play online · 在线打开: https://dino-cute.github.io/Kindergarten/**
+
 ![Contents](docs/contents.jpg)
 ![Lesson 7 – On the farm](docs/lesson.jpg)
 
