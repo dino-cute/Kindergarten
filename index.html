@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Pop-up English 立体书英语</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="stage"></div>
+
+<div id="loading"><div class="spin"></div><div>Loading… 正在准备书本</div></div>
+
+<div id="start" class="hidden">
+  <div class="title-card">
+    <div class="t-en">Pop-up English</div>
+    <div class="t-zh">立体书英语</div>
+    <button id="openBtn" class="btn big">▶ Open the book · 打开书</button>
+    <div class="hint">Tap the book to start · 点一点书本开始</div>
+  </div>
+</div>
+
+<div id="contents" class="hidden">
+  <div class="panel">
+    <div class="panel-title"><span class="ribbon">Contents</span><span class="zh">目录</span></div>
+    <div id="lessonGrid"></div>
+  </div>
+</div>
+
+<div id="lessonUI" class="hidden">
+  <div id="topbar">
+    <button id="homeBtn" class="btn round" title="目录">☰</button>
+    <div id="lessonSign"><span class="ribbon" id="lessonNum">Lesson 1</span><div class="l-en" id="lessonEn"></div><div class="l-zh" id="lessonZh"></div></div>
+    <button id="musicBtn" class="btn round" title="音乐">♪</button>
+  </div>
+
+  <div id="modeBar">
+    <button class="btn mode" data-mode="words"><b>Words</b><i>单词</i></button>
+    <button class="btn mode" data-mode="talk"><b>Talk</b><i>对话</i></button>
+    <button class="btn mode" data-mode="game"><b>Game</b><i>游戏</i></button>
+  </div>
+
+  <div id="wordsPanel" class="panelbar hidden">
+    <div id="wordHint" class="hintline">Tap a picture! · 点一点图片</div>
+    <div id="wordCard" class="hidden">
+      <div class="wc-text"><div class="wc-en" id="wcEn"></div><div class="wc-zh" id="wcZh"></div></div>
+      <button class="btn" id="wcWord">🔊 <span id="wcWordTxt"></span></button>
+      <button class="btn" id="wcSent">🔊 <span id="wcSentTxt"></span></button>
+      <button class="btn" id="wcSlow">🐢 Slow · 慢速</button>
+    </div>
+  </div>
+
+  <div id="talkPanel" class="panelbar hidden">
+    <button class="btn round" id="talkPrev" title="上一句">⏮</button>
+    <button class="btn round big" id="talkPlay" title="播放">▶</button>
+    <button class="btn round" id="talkNext" title="下一句">⏭</button>
+    <div id="talkCount" class="hintline"></div>
+  </div>
+
+  <div id="gamePanel" class="panelbar hidden">
+    <button class="btn" id="gameAsk">🔊 <span id="gameQ"></span></button>
+    <div id="stars"></div>
+    <button class="btn hidden" id="gameAgain">↺ Play again · 再玩一次</button>
+  </div>
+
+  <div id="bubbles"></div>
+  <div id="rating" class="hidden"></div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
